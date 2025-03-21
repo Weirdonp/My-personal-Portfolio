@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+    html {
+        --bs-primary: #3b82f6;
+        --bs-secondary: #64748b;
+        --bs-border-radius-none: 0px;
+        --bs-border-radius-sm: 4px;
+        --bs-border-radius: 8px;
+        --bs-border-radius-md: 12px;
+        --bs-border-radius-lg: 16px;
+        --bs-border-radius-xl: 20px;
+        --bs-border-radius-2xl: 24px;
+        --bs-border-radius-3xl: 32px;
+        --bs-border-radius-full: 9999px;
+        --bs-border-radius-button: 8px;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .timeline-dot::before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: #e5e7eb;
+        left: -33px;
+        top: 24px;
+    }
+
+    .timeline-item:last-child .timeline-dot::before {
+        height: 0;
+    }
+</style>
+</head>
+
+<body class="bg-gray-50">
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-['Pacifico'] text-gray-900">Portfolio</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-primary">About Me</a>
+                    <a href="#experience" class="text-gray-700 hover:text-primary">Experience</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary">Skills & Expertise</a>
+                    <a href="#projects" class="text-gray-700 hover:text-primary">Projects</a>
+                    <a href="#education" class="text-gray-700 hover:text-primary">Education</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+                </div>
+                <div id="theme-toggle">
+                    <button class="p-2 rounded-full bg-gray-100 shadow-sm cursor-pointer" onclick="toggleTheme()">
+                        <i class="ri-sun-line text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="h-16"></div>
+    <header class="py-20 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+            <div class="w-48 h-48 rounded-full overflow-hidden shadow-xl">
+                <img src="https://i.pinimg.com/736x/86/dc/8a/86dc8a7baeb749ed381ef0bf659ba683.jpg" class="w-full h-full object-cover" alt="Ngawang palden">
+            </div>
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-bold text-gray-900 mb-2">Ngawang Palden</h1>
+                <h2 class="text-xl text-primary mb-4">IT student</h2>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="mailto:paldenngawang20@gmail.com" class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md hover:shadow-lg transition-shadow">
+                        <i class="ri-mail-line text-gray-700"></i>
+                    </a>
+                    <a href="www.linkedin.com/in/ngawang-palden" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md hover:shadow-lg transition-shadow">
+                        <i class="ri-linkedin-line text-gray-700"></i>
+                    </a>
+                    <a href="https://github.com/Weirdonp" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md hover:shadow-lg transition-shadow">
+                        <i class="ri-github-line text-gray-700"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="about" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">About Me</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="prose max-w-none mb-8">
+                    <p class="text-gray-700 mb-4">
+                        I’m Ngawang Palden, a 19-year-old second-year IT student. My studies so far have provided me with a strong theoretical foundation in Python and machine learning, and I am now focused on applying this knowledge to practical projects. Currently, I’m developing my personal portfolio website, where I am working to refine my web development skills and showcase my growing abilities. I’m always eager to improve my technical expertise and explore ways to create efficient, user-friendly solutions.                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Outside of my academic work, I enjoy drawing and find creative expression through various forms of art. I value the opportunity to blend technical knowledge with creativity, and I approach both my academic and personal projects with this mindset. My goal is to continue learning and growing, both in my studies and in the way I apply technology to real-world challenges.                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-8">
+                    <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">Problem Solving</span>
+                    <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">Team Leadership</span>
+                    <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">System Architecture</span>
+                    <span class="px-3 py-1 bg-blue-100 text-primary rounded-full text-sm">full-stack developer</span>
+                </div>
+                <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-blue-600 transition-colors flex items-center gap-2">
+                    <i class="ri-download-line"></i>
+                    Download CV
+                </button>
+            </div>
+        </div>
+    </section>
+</section>
+</section>
+
+<section id="experience" class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8">Experience</h2>
+    <div class="relative">
+      <h3 class="text-2xl font-semibold mb-6 mt-12">Academic Projects</h3>
+      <div class="timeline-item relative pl-12 pb-12">
+        <div class="timeline-dot">
+          <div class="w-6 h-6 bg-primary rounded-full absolute -left-35"></div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-lg"> <i class="ri-code-line text-primary text-2xl"></i></div>
+              <div>
+                <h3 class="text-xl font-semibold"> Snake game</h3>
+                <p class="text-gray-600">2024</p>
+              </div>
+            </div>
+            <ul class="list-disc list-inside text-gray-700">
+              <li> Created a simple Snake game using Java
+              </li>
+              <li>Focused on implementing object-oriented programming concepts and creating an interactive, playable game.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item relative pl-12 pb-12">
+        <div class="timeline-dot">
+          <div class="w-6 h-6 bg-primary rounded-full absolute -left-35"></div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-lg"> <i class="ri-layout-line text-primary text-2xl"></i></div>
+              <div>
+                <h3 class="text-xl font-semibold"> Replica of CST Webpage</h3>
+                <p class="text-gray-600">2025</p>
+              </div>
+            </div>
+            <ul class="list-disc list-inside text-gray-700">
+              <li> Created a replica of the original CST webpage, demonstratingweb development skills</li>
+              <li> Focused on HTML, CSS, and JavaScript to replicate the layout and functionality</li>
+              <li> Implemented responsive design principles for optimal viewing across devices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item relative pl-12 pb-12">
+        <div class="timeline-dot">
+          <div class="w-6 h-6 bg-primary rounded-full absolute -left-35"></div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-lg"> <i class="ri-layout-line text-primary text-2xl"></i></div>
+              <div>
+                <h3 class="text-xl font-semibold"> Local Business Directory Website</h3>
+                <p class="text-gray-600">2025</p>
+              </div>
+            </div>
+            <ul class="list-disc list-inside text-gray-700">
+              <li> Developed a local business directory website, allowing users to search and find businesses by category.</li>
+              <li> Implemented features like search functionality, filters, and an interactive user interface.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h3 class="text-2xl font-semibold mb-6">Personal Projects</h3>
+      <div class="timeline-item relative pl-12 pb-12">
+        <div class="timeline-dot">
+          <div class="w-6 h-6 bg-primary rounded-full absolute -left-35"></div>
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-lg"> <i class="ri-mental-health-line text-primary text-2xl"></i> </div>
+              <div>
+                 <h3 class="text-xl font-semibold"> Workplace Stress Management System</h3>
+                <p class="text-gray-600">2024 - Present</p>
+              </div>
+            </div>
+            <ul class="list-disc list-inside text-gray-700">
+              <li> Designed a project aimed at managing workplace stress using technology</li>
+              <li> Focused on applying Python and machine learning principles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8">
+      Skills & Expertise
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-4">Technical Skills</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-gray-700">Html&css</span>
+              <span class="text-primary">65%</span>
+            </div>
+            <div class="h-2 bg-blue-200 rounded-full">
+              <div class="h-2 bg-primary rounded-full" style="width: 65%"
+              ></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-gray-700">Java</span>
+              <span class="text-primary">80%</span>
+            </div>
+            <div class="h-2 bg-blue-200 rounded-full">
+              <div class="h-2 bg-primary rounded-full" style="width: 80%"
+              ></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-gray-700">python</span>
+              <span class="text-primary">45%</span>
+            </div>
+            <div class="h-2 bg-blue-200 rounded-full">
+              <div
+                class="h-2 bg-primary rounded-full"
+                style="width: 45%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-4">Soft Skills</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-gray-700">Team Leadership</span>
+              <span class="text-primary">95%</span>
+            </div>
+            <div class="h-2 bg-blue-200 rounded-full">
+              <div
+                class="h-2 bg-primary rounded-full"
+                style="width: 95%"
+              ></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-gray-700">Communication</span>
+              <span class="text-primary">60%</span>
+            </div>
+            <div class="h-2 bg-blue-200 rounded-full">
+              <div class="h-2 bg-primary rounded-full" style="width: 60%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-gray-700">Problem Solving</span>
+              <span class="text-primary">75%</span>
+            </div>
+            <div class="h-2 bg-blue-200 rounded-full">
+              <div class="h-2 bg-primary rounded-full" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8">Featured Projects</h2>
+    <div class="flex gap-4 mb-8">
+      <button class="px-4 py-2 rounded-button bg-primary text-white" onclick="filterProjects('all')"> All</button>
+      <button class="px-4 py-2 rounded-button bg-gray-200 text-gray-700" onclick="filterProjects('web')"> Web</button>
+      <button class="px-4 py-2 rounded-button bg-gray-200 text-gray-700" onclick="filterProjects('mobile')"> Mobile</button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="project-card" data-category="web">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="https://www.cst.edu.bt/images/banner/cstlogo176.png" class="w-full h-48 object-cover" alt="Project 1"/>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">replica of cst website</h3>
+            <p class="text-gray-600 mb-4">Created a replica of the original CST webpage, demonstrating web development skills and attention to detail </p>
+            <div class="flex flex-wrap gap-2 mb-4"> 
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >Html</span>
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >Javascript</span>
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >css</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="text-primary hover:text-blue-600"><i class="ri-github-line text-xl"></i></a>
+              <a href="#" class="text-primary hover:text-blue-600"><i class="ri-external-link-line text-xl"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="web">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.zkCrRKtqftT4mglx75c_iQHaEK&pid=Api&P=0&h=180" class="w-full h-48 object-cover" alt="Project 2"/>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Local Business Directory Website</h3>
+            <p class="text-gray-600 mb-4"> Developed a local business directory website, allowing users to search and find businesses by category.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >javascript</span>
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >css</span>
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >Html</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="text-primary hover:text-blue-600"><i class="ri-github-line text-xl"></i></a>
+              <a href="#" class="text-primary hover:text-blue-600"><i class="ri-external-link-line text-xl"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="web">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.FnWl3w_sR92wl_NutSb8hAHaHa&pid=Api&P=0&h=180" class="w-full h-48 object-cover" alt="Project 3"/>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Snake Game</h3>
+            <p class="text-gray-600 mb-4"> Focused on implementing object-oriented programming concepts and creating an interactive, playable game</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >java</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="text-primary hover:text-blue-600"><i class="ri-github-line text-xl"></i></a>
+              <a href="#" class="text-primary hover:text-blue-600"><i class="ri-external-link-line text-xl"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="Backend">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.51MiaruBai4CRpgnU56UmgHaHT&pid=Api&P=0&h=180" class="w-full h-48 object-cover" alt="Project 4"/>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">EaseAI</h3>
+            <p class="text-gray-600 mb-4"> Designed a project aimed at managing workplace stress using technology.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >python</span>
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >MLPos</span>
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >openAI</span>
+              <span class="px-2 py-1 bg-blue-100 text-primary rounded-full text-xs" >calenderAPI</span>
+            </div>
+            <div class="flex gap-4">
+              <a href="#" class="text-primary hover:text-blue-600"><i class="ri-github-line text-xl"></i></a>
+              <a href="#" class="text-primary hover:text-blue-600"><i class="ri-external-link-line text-xl"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+<section id="education" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8"> Education & Trainings</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-4">Education</h3>
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-semibold">B.E ofInformation Technology</h4>
+            <p class="text-gray-600">College of science and technology</p>
+            <p class="text-gray-500">2023 - present</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg p-6">
+        <h3 class="text-xl font-semibold mb-4">Trainings</h3>
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-semibold">Advanced DeepTech ML and MLOPS training </h4>
+            <p class="text-gray-600">ITpark</p>
+            <p class="text-gray-500">2024 - 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact" class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <form id="contact-form" class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2" for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full px-4 py-2 rounded-button border border-gray-300 focus:outline-none focus:border-primary"
+              required
+            />
+          <div>
+            <label class="block text-gray-700 mb-2" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-2 rounded-button border border-gray-300 focus:outline-none focus:border-primary"
+              required
+            /> </div>
+          <div>
+            <label class="block text-gray-700 mb-2" for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-2 rounded-button border border-gray-300 focus:outline-none focus:border-primary"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="bg-primary text-white px-6 py-2 rounded-button hover:bg-blue-600 transition-colors"> Send Message</button>
+        </form>
+      </div>
+      <div>
+        <div class="bg-gray-50 rounded-lg p-6">
+          <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <i class="ri-map-pin-line text-primary"></i>
+              <span class="text-gray-700">Thimphu,Bhutan</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="ri-mail-line text-primary"></i>
+              <a href="mailto:paldenngawang20@gmail.com" class="text-gray-700 hover:text-primary">paldenngawang20@gmail.com</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <i class="ri-phone-line text-primary"></i>
+              <a href="tel:+97577344249" class="text-gray-700 hover:text-primary">+97577344249</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="bg-gray-900 text-white py-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <p>&copy; 2025 Ngawang palden. All rights reserved.</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-primary transition-colors">
+          <i class="ri-linkedin-line text-xl"></i>
+        </a>
+        <a href="#" class="hover:text-primary transition-colors">
+          <i class="ri-github-line text-xl"></i>
+        </a>
+        <a href="#" class="hover:text-primary transition-colors">
+          <i class="ri-twitter-line text-xl"></i>
+        </a>
+      </div>
+    </div>
+    <div class="text-center mt-4 text-gray-400">
+      <p>Last updated: March 13, 2025</p>
+    </div>
+  </div>
+  </footer>
+  <button
+  id="back-to-top"
+  class="fixed bottom-8 right-8 bg-blue-500 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 cursor-pointer">
+  <i class="ri-arrow-up-line text-xl"></i>
+</button>
+<script>
+  const backToTopButton = document.getElementById("back-to-top");
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      backToTopButton.style.opacity = "1";
+    } else {
+      backToTopButton.style.opacity = "0";
+    }
+  });
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+</body>
+</html>
+
+ 
